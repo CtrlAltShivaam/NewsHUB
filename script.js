@@ -2,20 +2,21 @@
 //     var el = document.getElementById("box");
 //     el.classList.toggle("show");
 //   }
-// const API_KEY= "1d3a0eefa97b499d8fbc4ee93eeb40b7";
- const API_KEY= "276580cd84b948849f480e6b63bb2718";
+// const API_KEY= "1d3a0eefa97b499d8fbc4ee93eeb40b7"; // Anuj bhaiya's api
+// const API_KEY= "276580cd84b948849f480e6b63bb2718";// 2043shivam api
+const API_KEY = "4f187fbc4265401b848a8d9d356792a5"; //2043mavihsapi
 const url = "https://newsapi.org/v2/everything?q=";
 
 window.addEventListener("load", () => fetchNews("India"));
 
 function reload() {
-    window.location.reload();
+  window.location.reload();
 }
 
 async function fetchNews(query) {
-    const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
-    const data = await res.json();
-    bindData(data.articles);
+  const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
+  const data = await res.json();
+  bindData(data.articles);
 }
 
 function bindData(articles) {
@@ -25,10 +26,10 @@ function bindData(articles) {
   cardsContainer.innerHTML = "";
 
   articles.forEach((article) => {
-      if (!article.urlToImage) return;
-      const cardClone = newsCardTemplate.content.cloneNode(true);
-      fillDataInCard(cardClone, article);
-      cardsContainer.appendChild(cardClone);
+    if (!article.urlToImage) return;
+    const cardClone = newsCardTemplate.content.cloneNode(true);
+    fillDataInCard(cardClone, article);
+    cardsContainer.appendChild(cardClone);
   });
 }
 
@@ -37,19 +38,21 @@ function fillDataInCard(cardClone, article) {
   const newsTitle = cardClone.querySelector("#news-title");
   const newsSource = cardClone.querySelector("#news-source");
   const newsDesc = cardClone.querySelector("#news-desc");
+  const newsURL = cardClone.querySelector(".news-url");
 
   newsImg.src = article.urlToImage;
   newsTitle.innerHTML = article.title;
   newsDesc.innerHTML = article.description;
+  newsURL.href = article.url;
 
   const date = new Date(article.publishedAt).toLocaleString("en-US", {
-      timeZone: "Asia/Jakarta",
+    timeZone: "Asia/Jakarta",
   });
 
   newsSource.innerHTML = `${article.source.name} · ${date}`;
 
   cardClone.firstElementChild.addEventListener("click", () => {
-      window.open(article.url, "_blank");
+    window.open(article.url, "_blank");
   });
 }
 
