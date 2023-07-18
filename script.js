@@ -1,7 +1,4 @@
-// function toggleShow () {
-//     var el = document.getElementById("box");
-//     el.classList.toggle("show");
-//   }
+
 // const API_KEY= "1d3a0eefa97b499d8fbc4ee93eeb40b7"; // Anuj bhaiya's api
 // const API_KEY= "276580cd84b948849f480e6b63bb2718";// 2043shivam api
 const API_KEY = "4f187fbc4265401b848a8d9d356792a5"; //2043mavihsapi
