@@ -1,93 +1,89 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="CSS/style.css">
-    <title>News App</title>
+   <meta charset="UTF-8">
+   <title>News App by Shivam</title>
+   <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css'>
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+   <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
-    <!-- Navbar -->
+   <!-- partial:index.partial.html -->
+   <header class="header" id="header">
+      <nav class="navbar container">
+         <a class="navbar-brand" href="#" style="width: 59px;">
+            <img src="assets/logo.png" class="brand" alt="Website logo">
+         </a>
+         <!-- <a href="./index.html">&nbsp by Shivam</a> -->
+         <div class="burger" id="burger">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+         </div>
+         <span class="overlay"></span>
+         <div class="menu" id="menu">
+            <ul class="menu-inner">
+               <li class="menu-item">
+                  <a class="menu-link" id="anime" onclick="onNavItemClick('India')">Home🏠</a>
+               </li>
+               <li class="menu-item">
+                  <a class="menu-link" id="anime" onclick="onNavItemClick('anime')">Anime🤣</a>
+               </li>
+               <li class="menu-item">
+                  <a class="menu-link" id="ipl" onclick="onNavItemClick('Technology')">Technology👨‍💻</a>
+               </li>
+               <li class="menu-item">
+                  <a class="menu-link" id="meme" onclick="onNavItemClick('meme')">Memes✨</a>
+               </li>
+               <li class="menu-item">
+                  <a class="menu-link" id="ipl" onclick="onNavItemClick('Fun')">Fun😒</a>
+               </li>
+            </ul>
+         </div>
+         <span><i class="bx bx-search search-toggle"></i></span>
+         <div class="search-block">
+            <form class="search-form">
+               <span><i class="bx bx-arrow-back search-cancel"></i></span>
+               <input id="search-text" type="search" name="search" class="search-input" placeholder="Search here...">
+            </form>
+         </div>
+      </nav>
+   </header>
+   <!-- partial -->
+   <main>
+      <div class="cards-container flex" id="cards-container">
+         <!-- <div class="card">
+           <div class="card-header">
+               <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+           </div>
+           <div class="card-content">
+               <h3 id="news-title">This is the Title</h3>
+               <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+               <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+               <a class="news-url" href="#" class="read-more">Read More</a>
+           </div>
+       </div> -->
+      </div>
+   </main>
+   <template id="template-news-card">
+      <div class="card">
+         <div class="card-header">
+            <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+         </div>
+         <div class="card-content">
+            <h3 id="news-title">This is the Title</h3>
+            <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+            <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+               saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+            <a class="news-url" href="#" class="read-more">Read More</a>
+         </div>
+      </div>
+   </template>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
+   <script src="JS/script.js"></script>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- Logo -->
-                <a class="navbar-brand" href="#">
-                    <img src="assets/logo.png" alt="Website logo">
-                </a>
-                <!-- -->
-
-                <!-- Links -->
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex">
-                    <li class="nav-item">
-                      <a class="nav-link" id="anime" onclick="onNavItemClick('anime')">Anime</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" id="ipl" onclick="onNavItemClick('Finance')">Finance</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" id="meme" onclick="onNavItemClick('meme')">Kids</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" id="ipl" onclick="onNavItemClick('ipl')">IPL</a>
-                    </li>
-                  </ul>
-                <!--   -->
-
-                <!-- Search Bar -->
-                <form class="d-flex"><!-- Check for search icon-->
-                    <input  id="search-text" class="news-input form-control me-2" type="search" placeholder="eg. Science" aria-label="Search">
-                    <button id="search-button" class="btn btn-outline-secondary" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
-                </form>
-                    
-            </div>
-        </div>
-    </nav>
-
-    <main>
-        <div class="cards-container container flex" id="cards-container">
-            
-        </div>
-    </main>
-
-
-    <template id="template-news-card">
-        <div class="card">
-            <div class="card-header">
-                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
-            </div>
-            <div class="card-content">
-                <h3 id="news-title">This is the Title</h3>
-                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
-                <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
-                <a class="news-url" href="#" class="read-more">Read More</a>
-            </div>
-        </div>
-    </template>
-    <!-- <template id="template-news-card">
-        <div class="card">
-            <div class="card-header">
-                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
-            </div>
-            <div class="card-content">
-                <h3 id="news-title">This is the Title</h3>
-                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
-                <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
-            </div>
-        </div>
-    </template> -->
-    <!--Navbar endss-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
 </body>
 
 </html>
