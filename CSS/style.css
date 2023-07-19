@@ -152,7 +152,7 @@ img {
 .menu-link:hover {
   color: var(--color-blue-200);
 }
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 992px) {
   .menu {
     position: relative;
     top: 0;
@@ -199,7 +199,7 @@ img {
   border-radius: 1rem;
   background: var(--color-black);
 }
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 992px) {
   .burger {
     display: none;
     visibility: hidden;
@@ -503,3 +503,86 @@ main {
     margin-block: 12px;
 }
 
+/* Footer CSS */
+
+
+footer {
+  background-color: grey;
+  border-top: 5px solid gold;
+  font-family: "p22-underground", sans-serif;
+  width: 100%;
+}
+footer p, footer address {
+  color: #f2f2f2;
+}
+footer .fa-copyright {
+  color: #f2f2f2;
+}
+footer a {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #ffc514;
+}
+footer h1 {
+  color: #b1c2d6;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 1.75rem;
+}
+footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 2rem 0 0 0 !important;
+  width: 100%;
+}
+footer .row img {
+  height: 75px;
+  margin: auto;
+}
+@media screen and (max-width: 992px) {
+  footer .row img {
+    margin: auto;
+  }
+}
+footer .row #contact {
+  color: #ffffff;
+  width: auto;
+  margin-top: 2rem;
+}
+@media screen and (max-width: 992px) {
+  footer .row #contact {
+    width: 83.333333%;
+    text-align: center;
+    padding-right: 0;
+  }
+}
+footer .row #resources {
+  width: auto;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 2rem;
+}
+@media screen and (max-width: 992px) {
+  footer .row #resources {
+    width: 83.333333%;
+    text-align: center;
+    padding-right: 0;
+  }
+}
+footer .row ul {
+  padding-left: 0;
+}
+footer .row ul li {
+  padding-bottom: 0.5rem;
+}
+footer #copyright {
+  border-top: 0.5px solid #b1c2d6;
+  padding: 10px;
+  width: 80%;
+}
+footer #copyright p {
+  margin-top: 1rem;
+}
