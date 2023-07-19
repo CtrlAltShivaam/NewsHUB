@@ -3,6 +3,8 @@ Newsapi.org's API will be used to fetch realtime News from different sources and
 
 Link- https://ctrlaltshivaam.github.io/NewsHUB/
 
-[Note: If News Stop loading, uncomment other api key from script file]
+![image](https://github.com/CtrlAltShivaam/NewsHUB/assets/64611917/4dc93d2c-86be-4548-8bf9-78a2582ddf91)
 
-Apparently github pages can't fetch the api details so it isn't working
+[Note: Using a developer plan so it will only run on Local Host]
+
+
