@@ -586,3 +586,51 @@ footer #copyright {
 footer #copyright p {
   margin-top: 1rem;
 }
+
+/* Edge case where API doesn't fetch anything*/
+/* Style for the display message container */
+#messageContainer {
+  padding: 10px;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-width: 600px;
+}
+
+/* Style for the GitHub button container */
+#githubButtonContainer {
+  text-align: center;
+}
+
+/* Style for the GitHub button */
+#githubButton {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #24292e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style for the GitHub icon */
+.github-icon {
+  display: inline-block;
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+/* Additional styles for the GitHub button, you can customize as needed */
+#githubButton:hover {
+  background-color: #181c20;
+}
+
+#githubButton:active {
+  background-color: #111518;
+}
