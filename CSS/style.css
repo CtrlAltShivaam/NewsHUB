@@ -512,9 +512,6 @@ footer {
   font-family: "p22-underground", sans-serif;
   width: 100%;
 }
-footer p, footer address {
-  color: #f2f2f2;
-}
 footer .fa-copyright {
   color: #f2f2f2;
 }
@@ -525,12 +522,6 @@ footer a {
 footer a:hover {
   color: #ffc514;
 }
-footer h1 {
-  color: #b1c2d6;
-  text-transform: uppercase;
-  font-weight: 200;
-  font-size: 1.75rem;
-}
 footer .row {
   display: flex;
   flex-wrap: wrap;
@@ -538,50 +529,24 @@ footer .row {
   margin: 2rem 0 0 0 !important;
   width: 100%;
 }
-footer .row img {
+footer img {
   height: 75px;
   margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 @media screen and (max-width: 992px) {
-  footer .row img {
+  footer img {
     margin: auto;
   }
 }
-footer .row #contact {
-  color: #ffffff;
-  width: auto;
-  margin-top: 2rem;
-}
-@media screen and (max-width: 992px) {
-  footer .row #contact {
-    width: 83.333333%;
-    text-align: center;
-    padding-right: 0;
-  }
-}
-footer .row #resources {
-  width: auto;
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 2rem;
-}
-@media screen and (max-width: 992px) {
-  footer .row #resources {
-    width: 83.333333%;
-    text-align: center;
-    padding-right: 0;
-  }
-}
-footer .row ul {
-  padding-left: 0;
-}
-footer .row ul li {
-  padding-bottom: 0.5rem;
-}
+
 footer #copyright {
+  text-align: center;
   border-top: 0.5px solid #b1c2d6;
   padding: 10px;
   width: 80%;
+  margin: auto;
 }
 footer #copyright p {
   margin-top: 1rem;
@@ -589,6 +554,13 @@ footer #copyright p {
 
 /* Edge case where API doesn't fetch anything*/
 /* Style for the display message container */
+#edgecase{
+  padding-block: 20px;
+  margin-top: 60px;
+  margin-left: 30px;
+  margin-right: 30px;
+
+}
 #messageContainer {
   padding: 10px;
   margin: 20px auto;
@@ -598,23 +570,24 @@ footer #copyright p {
   background-color: #f0f0f0;
   border: 1px solid #ccc;
   border-radius: 5px;
-  max-width: 600px;
+  max-width: 700px;
 }
 
 /* Style for the GitHub button container */
 #githubButtonContainer {
-  text-align: center;
+  display: grid;
+  place-items: center;
+  margin-bottom: -20px;
 }
 
 /* Style for the GitHub button */
 #githubButton {
   display: block;
   margin-top: 10px;
-  padding: 10px 15px;
+  padding: 10px 12px;
   font-size: 16px;
   color: #fff;
   background-color: #24292e;
-  border: none;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -628,9 +601,6 @@ footer #copyright p {
 
 /* Additional styles for the GitHub button, you can customize as needed */
 #githubButton:hover {
-  background-color: #181c20;
+  background-color: #24292ece;
 }
 
-#githubButton:active {
-  background-color: #111518;
-}

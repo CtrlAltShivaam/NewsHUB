@@ -40,17 +40,12 @@ if (searchToggle && searchCancel) {
 
 
 // const API_KEY= "1d3a0eefa97b499d8fbc4ee93eeb40b7"; // Anuj bhaiya's api
-const API_KEY = "4f187fbc4265401b848a8d9d356792a5";//2043mavihsapi //remove k at last
+const API_KEY = "4f187fbc4265401b848a8d9d356792a5k";//2043mavihsapi 
 //const API_KEY= "276580cd84b948849f480e6b63bb2718";// 2043shivam api
 
 function displayMessage(message) {
   const messageContainer = document.getElementById('messageContainer');
   messageContainer.textContent = message;
-}
-
-function redirectToGitHub() {
-  // Replace this with your GitHub repository URL
-  window.location.href = "https://github.com/CtrlAltShivaam/NewsHUB";
 }
 
 const url = "https://newsapi.org/v2/everything?q=";
@@ -61,6 +56,7 @@ function reload() {
   window.location.reload();
 }
 
+const hiddenDiv = document.getElementById('edgecase');
 
 
 async function fetchNews(query) {
@@ -70,13 +66,13 @@ async function fetchNews(query) {
 
     if (data.articles && data.articles.length > 0) {
       bindData(data.articles);
+      displayMessage("Here's the link to the Github Repo. Contribution to the code is welcomed")
     } else {
       displayMessage("This application works only on localhost, so download the source code from GitHub");
-      const githubButton = document.getElementById('githubButton');
-      githubButton.style.display = 'block';
-      githubButton.addEventListener('click', redirectToGitHub);
+      hiddenDiv.style.display = 'block';
     }
   } catch (error) {
+    hiddenDiv.style.display = 'block';
     displayMessage('Failed to fetch data from the API. Please try again later.');
     console.error(error);
   }

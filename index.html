@@ -28,19 +28,19 @@
          <div class="menu" id="menu">
             <ul class="menu-inner">
                <li class="menu-item">
-                  <a class="menu-link" id="anime" onclick="onNavItemClick('India')">Home🏠</a>
+                  <a class="menu-link" id="anime" onclick="onNavItemClick('India')">Home</a>
                </li>
                <li class="menu-item">
-                  <a class="menu-link" id="anime" onclick="onNavItemClick('anime')">Anime🤣</a>
+                  <a class="menu-link" id="anime" onclick="onNavItemClick('anime')">Anime</a>
                </li>
                <li class="menu-item">
-                  <a class="menu-link" id="ipl" onclick="onNavItemClick('Technology')">Technology👨‍💻</a>
+                  <a class="menu-link" id="ipl" onclick="onNavItemClick('Technology')">Technology</a>
                </li>
                <li class="menu-item">
-                  <a class="menu-link" id="meme" onclick="onNavItemClick('meme')">Memes✨</a>
+                  <a class="menu-link" id="meme" onclick="onNavItemClick('meme')">Memes</a>
                </li>
                <li class="menu-item">
-                  <a class="menu-link" id="ipl" onclick="onNavItemClick('Fun')">Fun😒</a>
+                  <a class="menu-link" id="ipl" onclick="onNavItemClick('Fun')">Fun</a>
                </li>
             </ul>
          </div>
@@ -54,18 +54,20 @@
       </nav>
    </header>
    <!-- partial -->
+   <div id="edgecase" style="display: none;">
+      <div id="messageContainer"></div>
+
+      <div id="githubButtonContainer"><a href = "https://github.com/CtrlAltShivaam/NewsHUB" target="_blank">
+         <!-- GitHub button -->
+         <button id="githubButton"><i class="github-icon fab fa-github"></i>GitHub</button></a>
+      </div>
+   </div>
+
 
    <main>
       <div class="cards-container flex" id="cards-container">
 
-         <div id="messageContainer"></div>
-         
-         <div id="githubButtonContainer">
-            <!-- GitHub button -->
-            <button id="githubButton"><i class="github-icon fab fa-github"></i>GitHub</button>
-          </div>
-      </button>
-         
+
       </div>
    </main>
    <template id="template-news-card">
@@ -86,18 +88,16 @@
 
 
    <footer>
-      <div class="row">
-         <img alt="NewsHUB" id="logo" src="assets/Black_logo.jpg"><br>
+      <img alt="NewsHUB" id="logo" src="assets/Black_logo.jpg">
 
-         <h2 align="center"> A News Fetching App - developed by <a
-               href="https://ctrlaltshivaam.github.io/Personal-Portfolio/">Shivam</a></h2>
-         <div class="row">
-            <div class="col-12" id="copyright">
-               <p align="center">
-                  <i class="far fa-copyright"><!--copyright--></i> &nbsp; Shivam Sharma | All Rights Reserved 2023
-               </p>
-            </div>
-         </div>
+      <h2 align="center"> A News Fetching App - developed by <a
+            href="https://ctrlaltshivaam.github.io/Personal-Portfolio/">Shivam</a></h2>
+      <div id="copyright">
+         <p>
+            <i class="far fa-copyright"><!--copyright--></i> &nbsp; Shivam Sharma | All Rights Reserved 2023
+         </p>
+      </div>
+
    </footer>
    <script src="JS/script.js"></script>
 
